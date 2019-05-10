@@ -10,11 +10,11 @@ Firefox, Chrome, Opera or any other web browser compatible with WebExtensions AP
 
 We recommend installing the stable releases via your browser's add-on store:
 
-Browser | Store link
------------- | -------------
+Browser                          | Store link
+-------------------------------- | -------------
 Firefox Desktop & Firefox Mobile | [Download from Firefox Add-ons](https://addons.mozilla.org/firefox/addon/proxybonanza-manager/)
-Google Chrome | [Download from Chrome Web Store](https://chrome.google.com/webstore/detail/proxybonanza-proxy-manage/kconeelhhdbnjombompadmclijkcfbph) 
-Opera | [Download from Opera Addons](https://addons.opera.com/extensions/details/proxybonanza-proxy-manager/)
+Google Chrome                    | [Download from Chrome Web Store](https://chrome.google.com/webstore/detail/proxybonanza-proxy-manage/kconeelhhdbnjombompadmclijkcfbph) 
+Opera                            | [Download from Opera Addons](https://addons.opera.com/extensions/details/proxybonanza-proxy-manager/)
 
 ### Installing from sources
 
@@ -35,6 +35,13 @@ git clone https://github.com/Proxybonanza/proxybonanza_web_extension.git
 2) Click on the `Load Temporary Add-on` button
 3) Select any file inside the directory to which you cloned this repository
 4) The extension will be installed, and will stay installed until you restart Firefox.
+
+## Blog Posts & Tutorials
+
+* [Firefox proxy add-on](http://blog.proxybonanza.com/firefox-proxy-add-on/)
+* [Chrome proxy extension](http://blog.proxybonanza.com/chrome-proxy-extension/) 
+* [Opera proxy add-on](http://blog.proxybonanza.com/opera-proxy-add-on/)
+
 
 ## Support
 
