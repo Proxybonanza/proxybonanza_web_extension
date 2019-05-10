@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta author="Michał 'Asgraf' Turek">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title data-l10n-id="addon_name">Proxybonanza Manager</title>
+	<link href="img/favicon.ico" rel="icon">
+	<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="libs/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="panel.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-content">
+			<span class="title" data-l10n-id="export_title">Export</span>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="navbar-link" href="page_proxylist.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span data-l10n-id="back">Back</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="content" class="container">
+	<div class="page" id="page_export">
+		<form class="well form-horizontal" action="#page_import_export" id="import_export_proxy" enctype="multipart/form-data">
+			<fieldset>
+				<div class="form-group">
+					<label class="col col-sm-3 control-label" data-l10n-id="columns">Columns</label>
+					<div class="col col-sm-9">
+						<div class="columns">
+							<div>
+								<input type="checkbox" id="import_export_countrycode">
+								<label for="import_export_countrycode" data-l10n-id="countrycode">Country code</label>
+							</div>
+							<div>
+								<input type="checkbox" id="import_export_label">
+								<label for="import_export_label" data-l10n-id="proxylabel">Label</label>
+							</div>
+							<div>
+								<input type="checkbox" id="import_export_ip" checked disabled>
+								<label for="import_export_ip" data-l10n-id="proxy_ip">Proxy IP</label>
+							</div>
+							<div>
+								<input type="checkbox" id="import_export_http_port" checked>
+								<label for="import_export_http_port" data-l10n-id="http_port">HTTP port</label>
+							</div>
+							<div>
+								<input type="checkbox" id="import_export_socks_port">
+								<label for="import_export_socks_port" data-l10n-id="socks_port">Socks port</label>
+							</div>
+							<div>
+								<input type="checkbox" id="import_export_username">
+								<label for="import_export_username" data-l10n-id="username">Username</label>
+							</div>
+							<div>
+								<input type="checkbox" id="import_export_password">
+								<label for="import_export_password" data-l10n-id="password">Password</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col col-sm-3 control-label" for="import_export_glue" data-l10n-id="separator">Separator</label>
+					<div class="col col-sm-9">
+						<select class="form-control" id="import_export_glue">
+							<option selected value="tab">Tab</option>
+							<option value="," data-l10n-id="comma">Comma</option>
+							<option value=":" data-l10n-id="colon">Colon</option>
+							<option value=";" data-l10n-id="semicolon">Semicolon</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col col-sm-3 control-label" for="copybox"></label>
+					<div class="col-sm-9">
+						<textarea id="copybox" class="form-control" readonly></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<a class="btn btn-default export_link" target="_blank" download="proxylist.csv" data-l10n-id="export">Export</a>
+					<a class="btn btn-default preview_link" target="_blank" data-l10n-id="preview">Preview</a>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<script src="libs/is_chrome.js"></script>
+<script src="libs/browser-polyfill.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/lodash.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="api/events.js"></script>
+<script src="api/common.js"></script>
+<script src="libs/sprintf.js"></script>
+<script src="api/i18n.js"></script>
+<script src="api/proxylist.js"></script>
+<script src="api/notifications.js"></script>
+<script src="libs/util.js"></script>
+<script src="js/page_export.js"></script>
+</body>
+</html>

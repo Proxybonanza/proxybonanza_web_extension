@@ -1,0 +1,287 @@
+{
+	"addon_name": {
+		"message": "Proxybonanza Proxy Manager"
+	},
+	"addon_description": {
+		"message": "Proxy list manager with automatic login/password filling. Makes it really easy to switch between proxies."
+	},
+	"message_proxylist_is_empty": {
+		"message": "Proxy list is empty. Please add some proxies first."
+	},
+	"message_external_change_detected": {
+		"message": "Proxybonanza Manager detected external change to your proxy settings."
+	},
+	"message_changed_proxy_to_xx": {
+		"message": "Changed proxy to %s"
+	},
+	"message_proxy_disabled": {
+		"message": "Proxy disabled"
+	},
+	"message_imported_xx_proxies": {
+		"message": "Imported %s proxies"
+	},
+	"message_another_import_operation": {
+		"message": "Another import operation in progress"
+	},
+	"message_invalid_api_key": {
+		"message": "Missing or invalid proxybonanza api key"
+	},
+	"message_invalid_userpackage_id": {
+		"message": "Invalid userpackage id"
+	},
+	"autotest_title": {
+		"message": "Automaticaly test proxy after enabling it"
+	},
+	"testurl_title": {
+		"message": "Proxy test url"
+	},
+	"teststring_title": {
+		"message": "Proxy test string"
+	},
+	"autoConfirmProxyAuth_title": {
+		"message": "Skip proxy dialogs"
+	},
+	"autoConfirmProxyAuth_description": {
+		"message": "Auto confirm username & password in proxy authorisation dialogs for known proxies"
+	},
+	"apiKey_title": {
+		"message": "Proxybonanza.com API key"
+	},
+	"autoRefresh_title": {
+		"message": "Automaticaly refresh tabs"
+	},
+	"autoRefresh_description": {
+		"message": "Automaticaly refresh all open tabs after proxy change"
+	},
+	"notifications_title": {
+		"message": "Notifications"
+	},
+	"notifications_description": {
+		"message": "You may disable all notifications except error notifications"
+	},
+	"disableWebrtc_title": {
+		"message": "Prevent WebRTC IP address leak when connected via proxy"
+	},
+	"openButton_title": {
+		"message": "Open Proxybonanza Manager"
+	},
+	"openButton_label": {
+		"message": "Open Proxybonanza Manager"
+	},
+	"country": {
+		"message": "Country"
+	},
+	"proxylabel": {
+		"message": "Label"
+	},
+	"proxy_ip": {
+		"message": "Proxy IP"
+	},
+	"no_label": {
+		"message": "No Label"
+	},
+	"proxy_search_empty": {
+		"message": "No matching proxies found"
+	},
+	"emptylistbox_title": {
+		"message": "Proxy list is empty"
+	},
+	"import_from_proxybonanza_com": {
+		"message": "Import from proxybonanza.com"
+	},
+	"import_csv_proxylist": {
+		"message": "Import a CSV proxylist"
+	},
+	"add_new_proxy": {
+		"message": "Add new proxy"
+	},
+	"buy_proxy_on_proxybonanza_com": {
+		"message": "Buy proxy on proxybonanza.com"
+	},
+	"previous": {
+		"message": "Previous"
+	},
+	"next": {
+		"message": "Next"
+	},
+	"enable": {
+		"message": "Enable"
+	},
+	"disable": {
+		"message": "Disable"
+	},
+	"delete_all_confirm_message": {
+		"message": "Do you really wanna delete all proxies from the list?"
+	},
+	"confirm": {
+		"message": "Confirm"
+	},
+	"cancel": {
+		"message": "Cancel"
+	},
+	"back": {
+		"message": "Back"
+	},
+	"delete_all_title": {
+		"message": "Proxy delete"
+	},
+	"options": {
+		"message": "Options"
+	},
+	"enabled": {
+		"message": "Enabled"
+	},
+	"Disabled": {
+		"message": "disabled"
+	},
+	"userpackage_name": {
+		"message": "Name"
+	},
+	"userpackage_ips": {
+		"message": "IPs"
+	},
+	"userpackage_transfer": {
+		"message": "Data transfer left"
+	},
+	"userpackage_expiration": {
+		"message": "Expiration"
+	},
+	"import": {
+		"message": "Import"
+	},
+	"userpackage_missing_api_key_text": {
+		"message": "Mising proxybonanza API KEY. You need to provide it in"
+	},
+	"userpackage_missing_api_key_link": {
+		"message": "options page"
+	},
+	"click_here": {
+		"message": "Click here"
+	},
+	"userpackage_missing_api_key_text2": {
+		"message": "to import your API KEY automatically"
+	},
+	"countrycode": {
+		"message": "Country code"
+	},
+	"http_port": {
+		"message": "HTTP port"
+	},
+	"socks_port": {
+		"message": "Socks port"
+	},
+	"username": {
+		"message": "Username"
+	},
+	"password": {
+		"message": "Password"
+	},
+	"separator": {
+		"message": "Separator"
+	},
+	"comma": {
+		"message": "Comma"
+	},
+	"colon": {
+		"message": "Colon"
+	},
+	"semicolon": {
+		"message": "Semicolon"
+	},
+	"export": {
+		"message": "Export"
+	},
+	"preview": {
+		"message": "Preview"
+	},
+	"copy": {
+		"message": "Copy"
+	},
+	"export_title": {
+		"message": "Export"
+	},
+	"import_title": {
+		"message": "Import"
+	},
+	"proxy_edit_title": {
+		"message": "Proxy edit"
+	},
+	"save": {
+		"message": "Save"
+	},
+	"information": {
+		"message": "Information"
+	},
+	"addon_created_by_proxybonanza_com": {
+		"message": "Addon created by Proxybonanza.com"
+	},
+	"country_flag_icons_from": {
+		"message": "Country flag icons from"
+	},
+	"copyright": {
+		"message": "Copyright"
+	},
+	"contact": {
+		"message": "Contact"
+	},
+	"back_to_proxylist": {
+		"message": "Back to proxylist"
+	},
+	"add_single_proxy": {
+		"message": "Add single proxy"
+	},
+	"import_from_csv_txt": {
+		"message": "Import from CSV/TXT"
+	},
+	"add_proxy": {
+		"message": "Add proxy"
+	},
+	"searchinput__placeholder": {
+		"message": "Search"
+	},
+	"edit": {
+		"message": "Edit"
+	},
+	"remove": {
+		"message": "Remove"
+	},
+	"columns": {
+		"message": "Columns"
+	},
+	"export_proxy": {
+		"message": "Export Proxy"
+	},
+	"unknown": {
+		"message": "Unknown"
+	},
+	"open_in_new_tab": {
+		"message": "Open in new tab"
+	},
+	"delete_all": {
+		"message": "Delete all"
+	},
+	"message_not_available_during_private_browsing": {
+		"message": "Communication with api.proxybonanza.com might expose your identity. In order to help protect your privacy, this feature is not available during the private browsing mode."
+	},
+	"message_import_proxybonanza_com_api_key": {
+		"message": "Requesting API KEY from proxybonaza.com"
+	},
+	"message_import_proxybonanza_com_api_key_done": {
+		"message": "Successfully imported API KEY from proxybonaza.com"
+	},
+	"message_import_proxybonanza_com_api_key_fail": {
+		"message": "Failed to import API KEY from proxybonaza.com"
+	},
+	"change_proxy_to": {
+		"message": "Change proxy to"
+	},
+	"sockProxyPriority_description": {
+		"message": "Proxy type priority"
+	},
+	"prefer_http_proxy": {
+		"message": "Prefer http proxy over socks proxy"
+	},
+	"prefer_socks_proxy": {
+		"message": "Prefer socks proxy over http proxy"
+	}
+}

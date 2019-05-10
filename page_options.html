@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta author="Michał 'Asgraf' Turek">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title data-l10n-id="addon_name">Proxybonanza Manager</title>
+	<link href="img/favicon.ico" rel="icon">
+	<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="libs/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="panel.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-content">
+			<span class="title" data-l10n-id="options">Options</span>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="navbar-link" href="page_proxylist.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span data-l10n-id="back">Back</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="content" class="container">
+	<div class="page" id="page_options">
+		<form id="options_form" class="well form-horizontal">
+			<fieldset>
+				<div class="form-group apiKey">
+					<label class="control-label" for="apiKey" data-l10n-id="apiKey_title">Proxybonanza.com API key</label>
+					<input id="apiKey" class="form-control" name="apiKey" type="text" pattern="[A-Za-z0-9]{50}[!][0-9]+">
+				</div>
+				<div class="form-group notifications">
+                    <label class="control-label" for="notifications">
+                        <span data-l10n-id="notifications_title">Notifications</span><br>
+                        <small data-l10n-id="notifications_description">You may disable all notifications except error notifications</small>
+                    </label>
+					<select id="notifications" class="form-control" name="notifications" required>
+						<option value="1" data-l10n-id="enabled">Enabled</option>
+						<option value="0" data-l10n-id="disabled">Disabled</option>
+					</select>
+				</div>
+				<div class="form-group autoRefresh">
+                    <label class="control-label" for="autoRefresh" data-l10n-id="autoRefresh_description">
+                        Automaticaly refresh all open tabs after proxy change
+                    </label>
+					<select id="autoRefresh" class="form-control" name="autoRefresh" required>
+						<option value="0" data-l10n-id="disabled">Disabled</option>
+						<option value="1" data-l10n-id="enabled">Enabled</option>
+					</select>
+				</div>
+				<div class="form-group sockProxyPriority">
+                    <label class="control-label" for="sockProxyPriority" data-l10n-id="sockProxyPriority_description">
+                        Proxy type priority
+                    </label>
+					<select id="sockProxyPriority" class="form-control" name="sockProxyPriority" required>
+						<option value="0" data-l10n-id="prefer_http_proxy">Prefer http proxy over socks proxy</option>
+						<option value="1" data-l10n-id="prefer_socks_proxy">Prefer socks proxy over http proxy</option>
+					</select>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<script src="libs/is_chrome.js"></script>
+<script src="libs/browser-polyfill.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/lodash.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="api/events.js"></script>
+<script src="api/common.js"></script>
+<script src="libs/sprintf.js"></script>
+<script src="api/i18n.js"></script>
+<script src="api/preferences.js"></script>
+<script src="js/page_options.js"></script>
+</body>
+</html>

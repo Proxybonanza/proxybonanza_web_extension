@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="main_page popup">
+<head>
+	<meta charset="utf-8">
+	<meta author="Michał 'Asgraf' Turek">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title data-l10n-id="addon_name">Proxybonanza Manager</title>
+	<link href="img/favicon.ico" rel="icon">
+	<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="libs/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="libs/silkgrid/slick.grid.css" rel="stylesheet">
+	<link href="libs/silkgrid/slick-default-theme.css" rel="stylesheet">
+	<link href="panel.css" rel="stylesheet">
+</head>
+<body>
+<nav id="top_nav" class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-content">
+			<form class="navbar-form pull-left" role="search" id="searchform" action="page_proxylist.html" method="get">
+				<div id="searchbox" class="form-group">
+					<input name="q" class="form-control" type="search" placeholder="Search" data-l10n-id="searchinput">
+				</div>
+			</form>
+
+			<span class="dropdown pull-right">
+				<a id="mobile_dropdown_button" class="btn btn-default nav-link dropdown-toggle" type="button" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
+				</a>
+				<ul id="mobile_dropdown" aria-labelledby="dropdownMenu" role="menu" class="dropdown-menu">
+					<li><a class="navbar-link" href="page_edit_proxy.html" data-l10n-id="add_single_proxy">Add single proxy</a></li>
+					<li><a class="navbar-link" href="page_import_proxybonanza.html" data-l10n-id="import_from_proxybonanza_com">Import from proxybonanza.com</a></li>
+					<li><a class="navbar-link firefox-popup-fix" href="page_import.html" data-l10n-id="import_from_csv_txt">Import from CSV/TXT</a></li>
+					<li class="export_proxy"><a class="navbar-link" href="page_export.html"><span data-l10n-id="export_proxy">Export Proxy</span></a></li>
+					<li class="options_page"><a class="navbar-link" href="page_options.html"><span data-l10n-id="options">Options</span></a></li>
+					<li class="delete_all"><a class="navbar-link deleteall" href="page_proxylist_delete.html"><span data-l10n-id="delete_all">Delete all</span></a></li>
+					<li><a class="navbar-link" href="https://proxybonanza.com/" target="_blank" data-l10n-id="buy_proxy_on_proxybonanza_com">Buy proxy on proxybonanza.com</a></li>
+					<li><a class="navbar-link" id="open_in_new_window" href="page_proxylist.html" target="_newtab"><span data-l10n-id="open_in_new_tab">Open in new tab</span></a></li>
+				</ul>
+			</span>
+
+		</div>
+	</div>
+</nav>
+<div id="content">
+	<div class="page" id="page_proxylist">
+		<div id="tablebox">
+			<table class="table table-bordered table-responsive">
+				<thead class="thead">
+				<tr>
+					<th class="pb_userpackage">Pb</th>
+					<th class="countrycode"><span data-l10n-id="country">Country</span></th>
+					<th class="proxylabel"><span data-l10n-id="proxylabel">Label</span></th>
+					<th class="ip"><span data-l10n-id="proxy_ip">Proxy IP</span></th>
+					<th class="edit_action actions"></th>
+					<th class="delete_action actions"></th>
+				</tr>
+				</thead>
+				<tbody class="tbody">
+				<template id="proxy_row_template">
+					<tr class="tr">
+						<td class="pb_userpackage"><span class="userpackage_name"></span></td>
+						<td class="countrycode"><img class="flag" src="img/flags/unknown.png"></td>
+						<td class="proxylabel" data-l10n-id="no_label">No label</td>
+						<td class="ip"></td>
+						<td class="edit_action actions">
+							<a class="btn btn-default btn-small edit_proxy" href="#">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span data-l10n-id="edit">Edit</span></a>
+						</td>
+						<td class="delete_action actions">
+							<a class="btn btn-default btn-small delete" href="#">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span data-l10n-id="remove">Remove</span></a>
+						</td>
+					</tr>
+				</template>
+				</tbody>
+			</table>
+		</div>
+		<div id="emptysearchbox" class="container" style="display: none;">
+			<span data-l10n-id="proxy_search_empty">No matching proxies found</span></div>
+		<div id="emptylistbox" class="container" style="display: none;">
+			<h3 data-l10n-id="emptylistbox_title">Proxy list is empty</h3>
+			<hr>
+			<div>
+				<a class="btn btn-success" href="page_import_proxybonanza.html"><span class="glyphicon glyphicon-log-in"></span>
+					<span data-l10n-id="import_from_proxybonanza_com">Import from proxybonanza.com</span></a></div>
+			<div>
+				<a class="btn btn-success firefox-popup-fix" href="page_import.html"><span class="glyphicon glyphicon-log-in"></span>
+					<span data-l10n-id="import_csv_proxylist">Import a CSV proxylist</span></a></div>
+			<div><a class="btn btn-success" href="page_edit_proxy.html"><span class="glyphicon glyphicon-plus"></span>
+				<span data-l10n-id="add_new_proxy">Add new proxy</span></a></div>
+			<div>
+				<a class="btn btn-primary" href="https://proxybonanza.com/" target="_blank"><span data-l10n-id="buy_proxy_on_proxybonanza_com">Buy proxy on proxybonanza.com</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<nav id="proxy_nav" class="navbar navbar-footer navbar-fixed-bottom" style="display: none;">
+	<div class="nav navbar-nav">
+		<a class="btn btn-gray btn-sm navbar-btn prev-proxy" href="#"><span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="txt" data-l10n-id="previous">Previous</span></a>
+		<a class="btn btn-success btn-sm navbar-btn toogle-proxy" href="#">
+			<span class="proxyEnable glyphicon glyphicon-play"></span><span class="proxyEnable" data-l10n-id="enable">Enable</span>
+			<span class="proxyDisable glyphicon glyphicon-pause"></span><span class="proxyDisable" data-l10n-id="disable">Disable</span>
+		</a>
+		<a class="btn btn-gray btn-sm navbar-btn next-proxy" href="#"><span class="txt" data-l10n-id="next">Next</span>
+			<span class="glyphicon glyphicon-chevron-right"></span></a>
+	</div>
+</nav>
+<script src="libs/is_chrome.js"></script>
+<script src="libs/browser-polyfill.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/lodash.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="api/events.js"></script>
+<script src="api/common.js"></script>
+<script src="api/preferences.js"></script>
+<script src="libs/sprintf.js"></script>
+<script src="api/i18n.js"></script>
+<script src="libs/util.js"></script>
+<script src="api/current_proxy.js"></script>
+<script src="api/proxylist.js"></script>
+<script src="api/notifications.js"></script>
+<script src="libs/countries.js"></script>
+<script src="js/page_proxylist.js"></script>
+</body>
+</html>

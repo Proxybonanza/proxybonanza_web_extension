@@ -1,0 +1,287 @@
+{
+	"addon_name": {
+		"message": "Proxybonanza - Menedżer Proxy"
+	},
+	"addon_description": {
+		"message": "Służy do zarządzania listą proxy. Funkcja automatycznego uzupełniania loginu i hasła pozwala na wygodną pracę z wieloma serwerami proxy."
+	},
+	"message_proxylist_is_empty": {
+		"message": "Lista proxy jest pusta. Proszę dodaj najpierw jakieś proxy."
+	},
+	"message_external_change_detected": {
+		"message": "Proxybonanza Manager wykrył zewnętrzną ingerencję w ustawieniach proxy twojej przeglądarki."
+	},
+	"message_changed_proxy_to_xx": {
+		"message": "Zmieniono proxy na %s"
+	},
+	"message_proxy_disabled": {
+		"message": "Proxy wyłączone"
+	},
+	"message_imported_xx_proxies": {
+		"message": "Zaimportowano %s proxy(ch)"
+	},
+	"message_another_import_operation": {
+		"message": "Inna operacja importowania już trwa"
+	},
+	"message_invalid_api_key": {
+		"message": "Brakujący lub nieprawidłowy klucz api"
+	},
+	"message_invalid_userpackage_id": {
+		"message": "Nieprawidłowe id pakietu"
+	},
+	"autotest_title": {
+		"message": "Automatycznie testuj proxy po jego włączeniu"
+	},
+	"testurl_title": {
+		"message": "Url do testowania proxych"
+	},
+	"teststring_title": {
+		"message": "Łańcuch znaków do testowania"
+	},
+	"autoConfirmProxyAuth_title": {
+		"message": "Pomiń okna dialogowe dla proxych"
+	},
+	"autoConfirmProxyAuth_description": {
+		"message": "Automatycznie potwierdza login i hasło w dialogach autoryzacyjnych dla znanych proxych"
+	},
+	"apiKey_title": {
+		"message": "Klucz API serwisu Proxybonanza.com"
+	},
+	"autoRefresh_title": {
+		"message": "Automatycznie odświeżaj karty"
+	},
+	"autoRefresh_description": {
+		"message": "Automatycznie odświeżaj wszystkie otwarte karty po zmianie proxy"
+	},
+	"notifications_title": {
+		"message": "Powiadomienia"
+	},
+	"notifications_description": {
+		"message": "Możesz tu wyłączyć wszystkie powiadomienia za wyjątkiem powiadomień o błędach"
+	},
+	"disableWebrtc_title": {
+		"message": "Zapobiegnij wyciekowi adresu IP za pomocą WebRTC kiedy proxy jest aktywne"
+	},
+	"openButton_title": {
+		"message": "Otwórz Proxybonanza Menedżera"
+	},
+	"openButton_label": {
+		"message": "Otwórz Proxybonanza Menedżera"
+	},
+	"country": {
+		"message": "Kraj"
+	},
+	"proxylabel": {
+		"message": "Etykieta"
+	},
+	"proxy_ip": {
+		"message": "IP"
+	},
+	"no_label": {
+		"message": "Brak etykiety"
+	},
+	"proxy_search_empty": {
+		"message": "Brak pasujących proxy"
+	},
+	"emptylistbox_title": {
+		"message": "Lista proxy jest pusta"
+	},
+	"import_from_proxybonanza_com": {
+		"message": "Importuj z proxybonanza.com"
+	},
+	"import_csv_proxylist": {
+		"message": "Importuj listę proxy z CSV"
+	},
+	"add_new_proxy": {
+		"message": "Dodaj nowe proxy"
+	},
+	"buy_proxy_on_proxybonanza_com": {
+		"message": "Kup proxy na proxybonanza.com"
+	},
+	"previous": {
+		"message": "Poprzednie"
+	},
+	"next": {
+		"message": "Następne"
+	},
+	"enable": {
+		"message": "Włącz"
+	},
+	"disable": {
+		"message": "Wyłącz"
+	},
+	"delete_all_confirm_message": {
+		"message": "Czy na pewno chcesz usunąć wszystkie proxy z listy?"
+	},
+	"confirm": {
+		"message": "Potwierdź"
+	},
+	"cancel": {
+		"message": "Anuluj"
+	},
+	"back": {
+		"message": "Powrót"
+	},
+	"delete_all_title": {
+		"message": "Usuwanie proxych"
+	},
+	"options": {
+		"message": "Opcje"
+	},
+	"enabled": {
+		"message": "Włączone"
+	},
+	"disabled": {
+		"message": "Wyłączone"
+	},
+	"userpackage_name": {
+		"message": "Nazwa"
+	},
+	"userpackage_ips": {
+		"message": "IPki"
+	},
+	"userpackage_transfer": {
+		"message": "Pozostały transfer"
+	},
+	"userpackage_expiration": {
+		"message": "Wygaśnie"
+	},
+	"import": {
+		"message": "Importuj"
+	},
+	"export": {
+		"message": "Eksportuj"
+	},
+	"preview": {
+		"message": "Podgląd"
+	},
+	"copy": {
+		"message": "Kopiuj"
+	},
+	"userpackage_missing_api_key_text": {
+		"message": "Nie podano klucza API proxybonanza. Proszę go podać na"
+	},
+	"userpackage_missing_api_key_link": {
+		"message": "stronie opcji"
+	},
+	"click_here": {
+		"message": "Kliknij tutaj"
+	},
+	"userpackage_missing_api_key_text2": {
+		"message": "aby zaimportować twój klucz API automatycznie"
+	},
+	"countrycode": {
+		"message": "Kod kraju"
+	},
+	"http_port": {
+		"message": "Port HTTP"
+	},
+	"socks_port": {
+		"message": "Port Socks"
+	},
+	"username": {
+		"message": "Login"
+	},
+	"password": {
+		"message": "Hasło"
+	},
+	"separator": {
+		"message": "Separator"
+	},
+	"comma": {
+		"message": "Przecinek"
+	},
+	"colon": {
+		"message": "Dwukropek"
+	},
+	"semicolon": {
+		"message": "Średnik"
+	},
+	"export_title": {
+		"message": "Eksportowanie"
+	},
+	"import_title": {
+		"message": "Importowanie"
+	},
+	"proxy_edit_title": {
+		"message": "Edycja proxy"
+	},
+	"save": {
+		"message": "Zapisz"
+	},
+	"information": {
+		"message": "Informacja"
+	},
+	"addon_created_by_proxybonanza_com": {
+		"message": "Addon created by Proxybonanza.com"
+	},
+	"country_flag_icons_from": {
+		"message": "Ikony flag pochodzą z"
+	},
+	"copyright": {
+		"message": "Prawa autorskie"
+	},
+	"contact": {
+		"message": "Kontakt"
+	},
+	"back_to_proxylist": {
+		"message": "Powrót do listy proxy"
+	},
+	"add_single_proxy": {
+		"message": "Dodaj pojedyncze proxy"
+	},
+	"import_from_csv_txt": {
+		"message": "Importuj z CSV/TXT"
+	},
+	"add_proxy": {
+		"message": "Dodaj proxy"
+	},
+	"searchinput__placeholder": {
+		"message": "Szukaj"
+	},
+	"edit": {
+		"message": "Edycja"
+	},
+	"remove": {
+		"message": "Usuń"
+	},
+	"columns": {
+		"message": "Kolumny"
+	},
+	"export_proxy": {
+		"message": "Eksportuj Proxy"
+	},
+	"unknown": {
+		"message": "Nieznany"
+	},
+	"open_in_new_tab": {
+		"message": "Otwórz w nowej karcie"
+	},
+	"delete_all": {
+		"message": "Usuń wszystkie"
+	},
+	"message_not_available_during_private_browsing": {
+		"message": "Komunikacja z api.proxybonanza.com może potencjalnie ujawnić twoją tożsamość. Aby pomóc chronić twoją prywatność, funkcja ta nie jest dostępna przy włączonym trybie prywatnego przeglądania."
+	},
+	"message_import_proxybonanza_com_api_key": {
+		"message": "Próba zaimportowania API KEYa z proxybonanza.com"
+	},
+	"message_import_proxybonanza_com_api_key_done": {
+		"message": "Zaimportowano API KEYa z proxybonanza.com"
+	},
+	"message_import_proxybonanza_com_api_key_fail": {
+		"message": "Nie udało się zaimportować API KEYa z proxybonaza.com"
+	},
+	"change_proxy_to": {
+		"message": "Zmień proxy na"
+	},
+	"sockProxyPriority_description": {
+		"message": "Preferowany typ proxy"
+	},
+	"prefer_http_proxy": {
+		"message": "Preferuj http ponad socks"
+	},
+	"prefer_socks_proxy": {
+		"message": "Preferuj socks ponad http"
+	}
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta author="Michał 'Asgraf' Turek">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title data-l10n-id="addon_name">Proxybonanza Manager</title>
+	<link href="img/favicon.ico" rel="icon">
+	<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="libs/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="panel.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-content">
+			<span class="title" data-l10n-id="delete_all_title">Proxy delete</span>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="navbar-link" href="page_proxylist.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span data-l10n-id="back">Back</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="content" class="container">
+	<div class="page" id="page_proxylist_delete">
+		<p data-l10n-id="delete_all_confirm_message">Do you really wanna delete all proxies from the list?</p>
+		<a class="btn btn-default" id="clearAll" href="page_proxylist.html" data-l10n-id="confirm">Confirm</a>
+		<a href="page_proxylist.html" data-l10n-id="cancel">Cancel</a>
+	</div>
+</div>
+<script src="libs/is_chrome.js"></script>
+<script src="libs/browser-polyfill.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/lodash.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="api/common.js"></script>
+<script src="libs/sprintf.js"></script>
+<script src="api/i18n.js"></script>
+<script src="api/proxylist.js"></script>
+<script src="js/page_proxylist_delete.js"></script>
+</body>
+</html>
