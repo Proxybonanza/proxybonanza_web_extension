@@ -1,6 +1,6 @@
 # Proxybonanza Proxy Manager
 
-Proxy list manager with automatic login/password filling. Makes it really easy to switch between proxies. Integrates with toolbar and context menu, comes with built-in proxy tester.
+Proxy list manager with automatic login/password filling. Makes it really easy to switch between proxies. Integrates with toolbar and context menu.
 
 ### Prerequisites
 
