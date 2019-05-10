@@ -1,2 +1,6 @@
 .idea
 web-ext-artifacts/
+*.zip
+*.crx
+*.nex
+*.xpi
