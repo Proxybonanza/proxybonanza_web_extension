@@ -24,14 +24,14 @@ git clone https://github.com/Proxybonanza/proxybonanza_web_extension.git
 ```
 
 #### Installing from sources on Chromium based browsers
-1) Open following url in your Chromium based browser: [chrome://extensions](chrome://extensions)
+1) Open following url in your Chromium based browser: [`chrome://extensions`](chrome://extensions)
 2) Enable Developer mode by ticking the checkbox in the upper-right corner
 3) Click on the `Load unpacked extension...` button
 4) Select the directory to which you cloned this repository
 5) The extension will be installed
 
 #### Installing from sources on Firefox based browsers
-1) Open following url in your Firefox based browser: [about:debugging](about:debugging)
+1) Open following url in your Firefox based browser: [`about:debugging`](about:debugging)
 2) Click on the `Load Temporary Add-on` button
 3) Select any file inside the directory to which you cloned this repository
 4) The extension will be installed, and will stay installed until you restart Firefox.
