@@ -19,3 +19,12 @@ browser.storage.onChanged.addListener((changes, area)=> {
 		}
 	});
 });
+
+
+function trigger(event, data) {
+	$(document).trigger(event, data);
+	browser.runtime.sendMessage({
+		event: event,
+		data: data
+	});
+}
