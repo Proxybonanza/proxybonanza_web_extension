@@ -5,8 +5,13 @@
  *
  * @returns {Promise}
  */
-function getPreferences(items) {
+async function getPreferences(items) {
 	return browser.storage.local.get(items);
+}
+
+async function getPreference(item) {
+	const preferences = await getPreferences(item);
+	return preferences[item];
 }
 
 /**
@@ -14,6 +19,6 @@ function getPreferences(items) {
  *
  * @returns {Promise}
  */
-function setPreferences(items) {
+async function setPreferences(items) {
 	return browser.storage.local.set(items);
 }
