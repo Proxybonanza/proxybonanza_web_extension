@@ -21,24 +21,22 @@ function autoCloseNotification(notification_id, timeout) {
  * @param text
  * @returns {Promise}
  */
-function notify(text) {
-	return getPreferences('notifications').then(preferences=> {
-		if (!preferences.notifications) {
-			return false;
-		}
+async function notify(text) {
+	const notifications = await getPreference('notifications');
+	if (!notifications) {
+		return false;
+	}
 
-		const addon_name = __('addon_name');
+	const addon_name = __('addon_name');
 
-		return browser.notifications.create({
-			'type': 'basic',
-			'iconUrl': 'img/proxybonanza_logo128.png',
-			'title': addon_name,
-			'message': text
-		}).then(notification_id=> {
-			autoCloseNotification(notification_id, 3000);
-			return notification_id;
-		});
+	const notification_id = await browser.notifications.create({
+		'type': 'basic',
+		'iconUrl': 'img/proxybonanza_logo128.png',
+		'title': addon_name,
+		'message': text
 	});
+	autoCloseNotification(notification_id, 3000);
+	return notification_id;
 }
 
 /**
@@ -47,24 +45,22 @@ function notify(text) {
  * @param text
  * @returns {Promise}
  */
-function toast(text) {
-	return getPreferences('notifications').then(preferences=> {
-		if (!preferences.notifications) {
-			return false;
-		}
+async function toast(text) {
+	const notifications = await getPreference('notifications');
+	if (!notifications) {
+		return false;
+	}
 
-		const addon_name = __('addon_name');
+	const addon_name = __('addon_name');
 
-		return browser.notifications.create({
-			'type': 'basic',
-			'iconUrl': 'img/proxybonanza_logo128.png',
-			'title': addon_name,
-			'message': text
-		}).then(notification_id=> {
-			autoCloseNotification(notification_id, 1500);
-			return notification_id;
-		});
+	const notification_id = await browser.notifications.create({
+		'type': 'basic',
+		'iconUrl': 'img/proxybonanza_logo128.png',
+		'title': addon_name,
+		'message': text
 	});
+	autoCloseNotification(notification_id, 1500);
+	return notification_id;
 }
 
 /**

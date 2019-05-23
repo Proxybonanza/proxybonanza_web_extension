@@ -9,25 +9,24 @@ if (Notification.permission !== "granted") {
  * @param text
  * @returns {Promise}
  */
-function notify(text) {
-	return getPreferences('notifications').then(preferences=> {
-		if (!preferences.notifications) {
-			return false;
-		}
+async function notify(text) {
+	const notifications = await getPreference('notifications');
+	if (!notifications) {
+		return false;
+	}
 
-		var addon_name = __('addon_name', 'Proxybonanza Manager');
+	var addon_name = __('addon_name', 'Proxybonanza Manager');
 
-		if (Notification.permission !== "granted") {
-			Notification.requestPermission();
-		}
+	if (Notification.permission !== "granted") {
+		Notification.requestPermission();
+	}
 
-		var notification = new Notification(addon_name, {
-			icon: '/img/proxybonanza_logo128.png',
-			body: text
-		});
-
-		setTimeout(()=>notification.close(), 3000);
+	var notification = new Notification(addon_name, {
+		icon: '/img/proxybonanza_logo128.png',
+		body: text
 	});
+
+	setTimeout(()=>notification.close(), 3000);
 }
 
 /**
@@ -36,25 +35,24 @@ function notify(text) {
  * @param text
  * @returns {Promise}
  */
-function toast(text) {
-	return getPreferences('notifications').then(preferences=> {
-		if (!preferences.notifications) {
-			return false;
-		}
+async function toast(text) {
+	const notifications = await getPreference('notifications');
+	if (!notifications) {
+		return false;
+	}
 
-		var addon_name = __('addon_name', 'Proxybonanza Manager');
+	var addon_name = __('addon_name', 'Proxybonanza Manager');
 
-		if (Notification.permission !== "granted") {
-			Notification.requestPermission();
-		}
+	if (Notification.permission !== "granted") {
+		Notification.requestPermission();
+	}
 
-		var notification = new Notification(addon_name, {
-			icon: '/img/proxybonanza_logo128.png',
-			body: text
-		});
-
-		setTimeout(()=>notification.close(), 1500);
+	var notification = new Notification(addon_name, {
+		icon: '/img/proxybonanza_logo128.png',
+		body: text
 	});
+
+	setTimeout(()=>notification.close(), 1500);
 }
 
 /**
@@ -65,7 +63,7 @@ function toast(text) {
  * @param text
  * @returns {Promise}
  */
-function notifyError(text) {
+async function notifyError(text) {
 	var addon_name = __('addon_name', 'Proxybonanza Manager');
 
 	if (Notification.permission !== "granted") {

@@ -7,7 +7,7 @@ window.proxyCache = {
 
 
 function currentProxyCacheWrite(proxy) {
-	proxy = Object.freeze(Object.assign({}, proxy || {})) ;
+	proxy = Object.freeze(Object.assign({}, proxy || {}));
 	window.proxyCache.current_proxy = proxy;
 	return Promise.resolve(proxy);
 }
@@ -47,8 +47,8 @@ function refreshAllTabs() {
  */
 $(document).on('current_proxy_changed', (e, current_proxy, sender)=> {
 	if (current_proxy.ip) {
-		getPreferences('autoRefresh').then(preferences=> {
-			if (preferences.autoRefresh) {
+		getPreference('autoRefresh').then(autoRefresh=> {
+			if (autoRefresh) {
 				refreshAllTabs();
 			}
 		})

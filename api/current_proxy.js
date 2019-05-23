@@ -25,7 +25,7 @@ async function disableCurrentProxy() {
 async function disableCurrentProxyWebExt() {
 	const window = await getBackgroundPage();
 	window.currentProxyCacheWrite({});
-	trigger('current_proxy_changed',{});
+	trigger('current_proxy_changed', {});
 	return Promise.resolve({});
 }
 

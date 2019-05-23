@@ -46,7 +46,7 @@ if (isWebExtensionCompatible()) {
 		{urls: ['<all_urls>']},
 		['blocking']
 	);
-} else if(isChromeCompatible()){
+} else if (isChromeCompatible()) {
 	chrome.webRequest.onAuthRequired.addListener(
 		(requestDetails, chromeCallback)=>provideCredentials(requestDetails).then(result=>chromeCallback(result)),
 		{urls: ['<all_urls>']},

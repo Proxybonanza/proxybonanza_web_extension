@@ -16,38 +16,36 @@ function getProxies() {
  *
  * @returns {Promise}
  */
-function getProxy(proxy_id) {
+async function getProxy(proxy_id) {
 	if (!proxy_id || proxy_id == '') {
 		return Promise.reject();
 	}
-	return getProxies().then(proxies=> {
-		return proxies.find(proxy=>proxy.id === proxy_id) || Promise.reject();
-	})
+	const proxies = await getProxies();
+	return proxies.find(proxy=>proxy.id === proxy_id) || Promise.reject();
 }
 
 /**
  * Save array of proxy objects into local storage
  *
- * @param {array} proxies_to_save
+ * @param {Array} proxies_to_save
  * @returns {Promise}
  */
-function saveProxies(proxies_to_save) {
+async function saveProxies(proxies_to_save) {
 	const tmp = {};
 	proxies_to_save.forEach(proxy_to_save=> {
 		tmp[proxy_to_save.id] = proxy_to_save;
 	});
-	return getProxies().then(proxies=> {
-		proxies.forEach(proxy=> {
-			if (tmp.hasOwnProperty(proxy.id)) {
-				$.extend(proxy, tmp[proxy.id]);
-				delete tmp[proxy.id];
-			}
-		});
-		Object.values(tmp).forEach(proxy_to_save=> {
-			proxies.push(proxy_to_save);
-		});
-		return browser.storage.local.set({'proxies': proxies});
+	const proxies = await getProxies();
+	proxies.forEach(proxy=> {
+		if ('id' in proxy) {
+			Object.assign(proxy, tmp[proxy.id]);
+			delete tmp[proxy.id];
+		}
 	});
+	Object.values(tmp).forEach(proxy_to_save=> {
+		proxies.push(proxy_to_save);
+	});
+	return browser.storage.local.set({'proxies': proxies});
 }
 
 /**
@@ -66,10 +64,9 @@ function saveProxy(proxy_to_save) {
  * @param proxy_id
  * @returns {Promise}
  */
-function deleteProxy(proxy_id) {
-	return getProxies().then(proxies=> {
-		return browser.storage.local.set({'proxies': proxies.filter(proxy=>proxy.id != proxy_id)});
-	});
+async function deleteProxy(proxy_id) {
+	const proxies = await getProxies();
+	return browser.storage.local.set({'proxies': proxies.filter(proxy=>proxy.id != proxy_id)});
 }
 
 /**
