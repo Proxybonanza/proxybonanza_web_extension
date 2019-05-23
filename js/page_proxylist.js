@@ -347,7 +347,7 @@ $(()=> {
 
 	Promise.all([getProxies(), getCurrentProxy()]).then(results=>reloadProxylist(...results));
 
-	if (!isChrome && window != window.top) {
+	if (hasBrowserObject && window != window.top) {
 		document.querySelectorAll('a.firefox-popup-fix').forEach(a=> {
 			$(a).click(e=> {
 				openInNewTab(a.href);

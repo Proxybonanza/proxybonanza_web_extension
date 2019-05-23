@@ -38,7 +38,7 @@
 				"https://strona2.pbnza.net/*"
 			],
 			"js": [
-				"libs/is_chrome.js",
+				"libs/browser-api-check.js",
 				"libs/browser-polyfill.js",
 				"libs/jquery.min.js",
 				"libs/lodash.min.js",
@@ -74,7 +74,7 @@
 	},
 	"background": {
 		"scripts": [
-			"libs/is_chrome.js",
+			"libs/browser-api-check.js",
 			"libs/browser-polyfill.js",
 			"libs/jquery.min.js",
 			"libs/lodash.min.js",
@@ -87,7 +87,6 @@
 			"api/common.js",
 			"api/proxylist.js",
 			"api/current_proxy.js",
-			"background/proxy_priority.js",
 			"background/version_expose.js",
 			"background/http_proxy_auth.js",
 			"background/menus.js",
