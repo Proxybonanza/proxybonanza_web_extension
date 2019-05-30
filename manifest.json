@@ -1,6 +1,6 @@
 {
 	"name": "__MSG_addon_name__",
-	"version": "4.5",
+	"version": "4.6",
 	"manifest_version": 2,
 	"description": "__MSG_addon_description__",
 	"author": "Michał Turek",
