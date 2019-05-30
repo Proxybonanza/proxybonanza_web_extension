@@ -378,6 +378,6 @@ if (isWebExtensionCompatible()) {
 
 if (chrome && chrome.proxy && chrome.proxy.onProxyError && chrome.proxy.onProxyError.addListener) {
 	chrome.proxy.onProxyError.addListener(error => {
-		console.error('Proxy error: ', error.message, error);
+		console.error('Proxy error: ' + (error.message || error.error), error);
 	});
 }
