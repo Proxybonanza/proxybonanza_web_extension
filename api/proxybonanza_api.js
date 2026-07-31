@@ -103,9 +103,9 @@ class ProxybonanzaApi {
 						}
 						return userpackage.ippacks.map(ippack=> {
 							return {
-								id: 'ippack_' + ippack.id,
-								countrycode: ippack.proxyserver.georegion.country.isocode,
-								label: ippack.proxyserver.georegion.name,
+								id: 'ippack_' + ippack.port_http,
+								countrycode: ippack.countrycode,
+								label: ippack.ip==ippack.outgoing_ip ? ippack.georegion_name : ippack.georegion_name + ': ' + ippack.outgoing_ip,
 								ip: ippack.ip,
 								httpport: ippack.port_http,
 								socksport: ippack.port_socks,
