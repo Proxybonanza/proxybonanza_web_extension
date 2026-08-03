@@ -103,7 +103,7 @@ class ProxybonanzaApi {
 						}
 						return userpackage.ippacks.map(ippack=> {
 							return {
-								id: 'ippack_' + ippack.port_http,
+								id: 'uid_' + ippack.port_http + '_' + ippack.ip,
 								countrycode: ippack.countrycode,
 								label: ippack.ip==ippack.outgoing_ip ? ippack.georegion_name : ippack.georegion_name + ': ' + ippack.outgoing_ip,
 								ip: ippack.ip,
