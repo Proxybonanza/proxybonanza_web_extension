@@ -1,9 +1,14 @@
 {
 	"name": "__MSG_addon_name__",
-	"version": "4.6",
+	"version": "4.7",
 	"manifest_version": 2,
 	"description": "__MSG_addon_description__",
-	"author": "Michał Turek",
+	"author": "Proxybonanza.com",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "91.1.0"
+      }
+    },
 	"browser_action": {
 		"default_popup": "popup.html",
 		"browser_style": true,
